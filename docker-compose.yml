@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/fulll
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/fulll_test
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
