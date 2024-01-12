@@ -1,3 +1,3 @@
 module.exports = {
-    default: `--format-options '{"snippetInterface": "async-await"}' --require dist/features/**/*.js`,
+    default: `--format-options '{"snippetInterface": "async-await"}' --require tests/features/**/*.js`,
 }

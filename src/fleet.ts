@@ -2,14 +2,14 @@
 
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { createCommand } from "../App/Commands/create";
+import { createCommand } from "./App/Commands/create";
 
 interface Commands {
     [key: string]: yargs.CommandModule
 }
 
 const commandKey = process.argv[2];
-console.log(commandKey)
+
 const commands: Commands = {
     create: createCommand
 }
