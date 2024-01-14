@@ -1,10 +1,10 @@
 import Fleet from '../../Domain/Models/Fleet'
 import Vehicle from '../../Domain/Models/Vehicle'
-import FleetCommandsRepository from '../Commands/Repositories/FleetCommandsRepository'
-import VehicleCommandsRepository from '../Commands/Repositories/VehicleCommandsRepository'
+import FleetCommandsRepository from '../../Infra/Repositories/FleetCommandsRepository'
+import VehicleCommandsRepository from '../../Infra/Repositories/VehicleCommandsRepository'
 import { RegisterVehicleArgs } from '../Commands/registerVehicle'
-import FleetQueriesRepository from '../Queries/Repositories/FleetQueriesRepository'
-import VehicleQueriesRepository from '../Queries/Repositories/VehicleQueriesRepository'
+import FleetQueriesRepository from '../../Infra/Repositories/FleetQueriesRepository'
+import VehicleQueriesRepository from '../../Infra/Repositories/VehicleQueriesRepository'
 
 export const RegisterVehicleHandler = async (args: RegisterVehicleArgs): Promise<Fleet> => {
   const fleetRepository = new FleetCommandsRepository()

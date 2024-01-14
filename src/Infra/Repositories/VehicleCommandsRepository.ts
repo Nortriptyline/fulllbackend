@@ -1,7 +1,7 @@
-import Vehicle from '../../../Domain/Models/Vehicle'
-import { SqliteRepository } from '../../../Infra/Sqlite/SqliteRepository'
+import Vehicle from '../../Domain/Models/Vehicle'
+import { SqliteRepository } from '../Sqlite/SqliteRepository'
 import { VehicleCommandsInterface } from '../Interfaces/VehicleCommandsInterface'
-import VehicleQueriesRepository from '../../Queries/Repositories/VehicleQueriesRepository'
+import VehicleQueriesRepository from './VehicleQueriesRepository'
 
 class VehicleCommandsRepository extends SqliteRepository implements VehicleCommandsInterface {
   public async save(vehicle: Vehicle): Promise<Vehicle> {

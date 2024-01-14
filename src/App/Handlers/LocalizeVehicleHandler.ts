@@ -1,8 +1,8 @@
 import Vehicle from '../../Domain/Models/Vehicle'
-import VehicleCommandsRepository from '../Commands/Repositories/VehicleCommandsRepository'
+import VehicleCommandsRepository from '../../Infra/Repositories/VehicleCommandsRepository'
 import { LocalizeVehicleArgs } from '../Commands/localizeVehicle'
-import FleetQueriesRepository from '../Queries/Repositories/FleetQueriesRepository'
-import VehicleQueriesRepository from '../Queries/Repositories/VehicleQueriesRepository'
+import FleetQueriesRepository from '../../Infra/Repositories/FleetQueriesRepository'
+import VehicleQueriesRepository from '../../Infra/Repositories/VehicleQueriesRepository'
 
 export const LocalizeVehicleHandler = async (args: LocalizeVehicleArgs): Promise<Vehicle> => {
   const fleetQueriesRepository = new FleetQueriesRepository()

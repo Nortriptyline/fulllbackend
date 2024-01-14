@@ -1,5 +1,5 @@
-import type Fleet from '../../../Domain/Models/Fleet'
-import { SqliteRepository } from '../../../Infra/Sqlite/SqliteRepository'
+import type Fleet from '../../Domain/Models/Fleet'
+import { SqliteRepository } from '../Sqlite/SqliteRepository'
 import { type FleetCommandsInterface } from '../Interfaces/FleetCommandsInterface'
 
 class FleetCommandsRepository extends SqliteRepository implements FleetCommandsInterface {

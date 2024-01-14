@@ -1,4 +1,4 @@
-import Vehicle from '../../../Domain/Models/Vehicle'
+import Vehicle from '../../Domain/Models/Vehicle'
 
 export interface VehicleQueriesInterface {
   findById(id: number): Promise<Vehicle | null>

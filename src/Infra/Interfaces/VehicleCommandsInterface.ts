@@ -1,4 +1,4 @@
-import type Vehicle from '../../../Domain/Models/Vehicle'
+import type Vehicle from '../../Domain/Models/Vehicle'
 
 export interface VehicleCommandsInterface {
   save: (vehicle: Vehicle) => Promise<Vehicle>

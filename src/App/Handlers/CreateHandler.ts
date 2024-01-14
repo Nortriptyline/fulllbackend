@@ -1,6 +1,6 @@
 import { CreateArgs } from '../Commands/create'
 import Fleet from '../../Domain/Models/Fleet'
-import FleetCommandsRepository from '../Commands/Repositories/FleetCommandsRepository'
+import FleetCommandsRepository from '../../Infra/Repositories/FleetCommandsRepository'
 
 export const CreateHandler = async (args: CreateArgs): Promise<Fleet> => {
   const fleetRepository = new FleetCommandsRepository()

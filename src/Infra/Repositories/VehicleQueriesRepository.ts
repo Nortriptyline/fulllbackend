@@ -1,5 +1,5 @@
-import Vehicle from '../../../Domain/Models/Vehicle'
-import { SqliteRepository } from '../../../Infra/Sqlite/SqliteRepository'
+import Vehicle from '../../Domain/Models/Vehicle'
+import { SqliteRepository } from '../Sqlite/SqliteRepository'
 import { VehicleQueriesInterface } from '../Interfaces/VehicleQueriesInterface'
 
 class VehicleQueriesRepository extends SqliteRepository implements VehicleQueriesInterface {
