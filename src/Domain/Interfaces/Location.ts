@@ -1,6 +1,7 @@
 interface Location {
-    latitude: number;
-    longitude: number;
+  latitude: number
+  longitude: number
+  altitude: number | null
 }
 
-export default Location;
+export default Location

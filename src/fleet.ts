@@ -6,6 +6,7 @@ import { hideBin } from "yargs/helpers";
 import { createCommand } from "./App/Commands/create";
 import { localizeVehicleCommand } from "./App/Commands/localizeVehicle";
 import { registerVehicleCommand } from "./App/Commands/registerVehicle";
+import { initializeDatabaseCommand } from "./App/Commands/initializeDatabase";
 
 // Define the Commands type so we can map the command line arguments to the commands
 interface Commands {
@@ -17,6 +18,7 @@ const commandKey = process.argv[2];
 
 // Map the command line arguments to the commands
 const commands: Commands = {
+    "initialize-database": initializeDatabaseCommand,
     "create": createCommand,
     "register-vehicle": registerVehicleCommand,
     "localize-vehicle": localizeVehicleCommand

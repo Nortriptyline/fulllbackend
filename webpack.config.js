@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     mode: 'production',
@@ -25,5 +26,6 @@ module.exports = {
         // Required to keep shebang in output file
         new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: true }),
     ],
-    target: 'node'
+    target: 'node',
+    externals: [nodeExternals()],
 };
