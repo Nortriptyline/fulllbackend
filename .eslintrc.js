@@ -20,7 +20,11 @@ module.exports = {
     "parserOptions": {
         "project": "./tsconfig.eslint.json"
     },
-    "ignorePatterns": ["features/step_definitions/stepdef.ts", ".eslintrc.js"],
+    "ignorePatterns": [
+        "features/step_definitions/stepdef.ts",
+        ".eslintrc.js",
+        "webpack.config.js",
+    ],
     "rules": {
         "@typescript-eslint/no-explicit-any": "off",
     }

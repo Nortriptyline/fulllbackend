@@ -18,10 +18,26 @@ To build a single executable file, you can run `yarn build`
 
 If nodejs is installed and project has been built, you will be able to execute the JS file located in the dist folder.
 
+In order to simplify database creation and reinitialization, the `initialize-database`command has been added. This will create a file named `fleet.sqlite` database
+
 ```bash
-#Example :
+#help :
 cd ./dist
-./fleet create <userId>
+
+fleet <cmd> [args]
+
+Commandes :
+  fleet initialize-database                 Initialize the database
+
+  fleet create <userId>                     Create a fleet for the user with the given ID
+
+  fleet register-vehicle <fleetId>          Register a vehicle to a fleet by its
+  <vehiclePlateNumber>                      plate number
+
+  fleet localize-vehicle <fleetId>          Set the location of a vehicle by its
+  <vehiclePlateNumber> latitude longitude   plate number in a fleet
+  [altitude]
+
 ```
 
 # Questions

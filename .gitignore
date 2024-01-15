@@ -2,3 +2,4 @@ node_modules
 dist
 tests
 fleet.sqlite
+fleet-test.sqlite

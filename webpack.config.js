@@ -5,7 +5,7 @@ const nodeExternals = require('webpack-node-externals');
 module.exports = {
     mode: 'production',
     // path to your main TypeScript file
-    entry: './src/fleet.ts', 
+    entry: './src/fleet.ts',
     module: {
         rules: [
             {
