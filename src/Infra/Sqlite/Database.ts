@@ -17,8 +17,10 @@ class Database {
 
   private async getDb(): Promise<SQLiteDatabase> {
     if (!this.db) {
+      const dbpath = `${__dirname}/fleet.sqlite`
+      const dbpathTest = `./fleet-test.sqlite`
       this.db = await open({
-        filename: process.env.NODE_ENV === 'test' ? 'fleet-test.sqlite' : 'fleet.sqlite',
+        filename: process.env.NODE_ENV === 'test' ? dbpathTest : dbpath,
         driver: sqlite3.Database,
       })
     }

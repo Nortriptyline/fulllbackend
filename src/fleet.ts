@@ -49,11 +49,13 @@ async function main() {
   if (commandKey !== 'initialize-database') {
     // If the database has not been initialized, show an error message and exit by looking for fleet.sqlite in the current directory
     try {
-      const perms = accessSync('fleet.sqlite')
-      if (perms === undefined) throw new Error('Database not initialized, run fleet initialize-database')
+      const dbpath = `${__dirname}/fleet.sqlite`
+      accessSync(dbpath)
     } catch {
       // Automatically initialize the database if file not found
+      console.log('Database not initialized, initializing...')
       await initializeDatabaseHandler()
+      console.log('Database initialized, continuing...')
     }
   }
 
