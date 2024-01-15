@@ -14,16 +14,23 @@ After installing the dependencies you can run the tests with this command `yarn 
 
 To build a single executable file, you can run `yarn build`
 
+After this operation, you will find the `./dist/fleet` executable file
+
 # Runing the executable
 
 If nodejs is installed and project has been built, you will be able to execute the JS file located in the dist folder.
 
-In order to simplify database creation and reinitialization, the `initialize-database`command has been added. This will create a file named `fleet.sqlite` database
+## Database
+Database should be automatically created at during first call, as long as the `fleet.sqlite` file does not exists
+In order to simplify database creation and reinitialization, the `initialize-database`command has been added.
+This will drop and recreate required tables from the database file.
+
+Executing `yarn test` will create a specific file named `fleet-test.sqlite` for performing tests outside the real database.
 
 ```bash
-#help :
 cd ./dist
 
+#help :
 fleet <cmd> [args]
 
 Commandes :
