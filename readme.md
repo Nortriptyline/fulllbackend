@@ -21,7 +21,7 @@ After this operation, you will find the `./dist/fleet` executable file
 If nodejs is installed and project has been built, you will be able to execute the JS file located in the dist folder.
 
 ## Database
-Database should be automatically created at during first call, as long as the `fleet.sqlite` file does not exists
+Database should be automatically created during first call, as long as the `fleet.sqlite` file does not exists
 In order to simplify database creation and reinitialization, the `initialize-database`command has been added.
 This will drop and recreate required tables from the database file.
 
